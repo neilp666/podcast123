@@ -2,18 +2,13 @@
 
 Podcast application 
 
-* Ruby version
+* Ruby 2
 
-* System dependencies
+* Rails 4.1
 
-* Configuration
+* Bootstrap 3 
 
-* Database creation
+* Sqlite - development
 
-* Database initialization
+* Postgres - production
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions

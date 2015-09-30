@@ -17,10 +17,15 @@
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic,600italic);
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "podcasts";
+
+
 
  body {
   font-family: 'Open Sans', sans-serif;
  }
+
+
 
 #background {
   background: url('https://dl.dropboxusercontent.com/s/phrqfxef0c4x69x/river1.jpg');
@@ -62,7 +67,11 @@
     letter-spacing: 1px;
     margin: 7rem 0 2rem 0;
   }
+
+  .button {
+      margin: 1.5rem 2.5% 0 2.5%;
  }
+}
 
  .wrapper_wide {
   width: 80%;
@@ -98,14 +107,8 @@
   border: none;
   display: inline-block;
   min-width: 8.5rem;
-
  }
 
-
-  .button {
-
-  margin: 1.5rem 2.5% 0 2.5%;
- }
 
  .button_highlight {
 
@@ -126,4 +129,98 @@
     background: darken($white, 7.5%);
   }
  }
+
+
+#main_header {
+   color: $dark;
+   background-size: $white;
+   padding: 2.5rem 0;
+   #logo {
+      float: left;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $dark;
+      text-decoration: none;
+    }
+    nav {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          display: inline;
+          margin-left: 2.5rem;
+
+          a {
+            color: $dark;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+}
+
+#banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 4rem;
+  h1 {
+    text-align: center;
+    color: $white;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0px;
+    padding: 8rem 0;
+  }
+}
+
+
+.podcast_banner {
+  background-image: url('newyork.jpeg');
+}
+
+.pagination:before, .pagination:after {
+  content: " ";
+  display: table;
+}
+
+.pagination:after {
+  clear: both;
+}
+
+.pagination {
+  text-align: center;
+  margin: 1rem 0 5rem 0;
+  a, .previous_page, .current, .next_page {
+    padding: 0.75rem 1rem;
+    margin: 0 .25rem;
+    border-radius: .15rem;
+    line-height: 1.25;
+    text-decoration: none;
+    background-color: #EDEFF5;
+    font-weight: 700;
+    font-size: .7rem;
+    font-style: normal;
+    color: $dark;
+    &:hover {
+      background: $highlight;
+      color: $white;
+    }
+  }
+  .current {
+    background: $highlight;
+    color: $white;
+  }
+
+  .disabled {
+    color: #C0C0C0;
+    &:hover {
+      color: #C0C0C0;
+      background: #EDEFF5;
+    }
+  }
+}
+
 

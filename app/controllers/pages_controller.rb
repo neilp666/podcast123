@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def podcasts
+  end
+
   def index
   end
 

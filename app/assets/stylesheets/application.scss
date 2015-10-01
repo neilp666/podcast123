@@ -13,7 +13,7 @@
  */
  $white: #FFFFFF;
  $highlight: #d2674e;
- $dark: #d2292e;
+ $dark: #000;
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic,600italic);
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -79,7 +79,7 @@
  }
 
   .wrapper_skinny {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
  }
 
@@ -219,6 +219,61 @@
     &:hover {
       color: #C0C0C0;
       background: #EDEFF5;
+    }
+  }
+}
+
+#breadcrumb {
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid lighten($dark, 75%);
+  font-weight: 700;
+  font-size: 1rem;
+ 
+  a {
+    color: lighten($dark, 45%);
+    text-decoration: none;
+  }
+  span {
+    margin: 0 .5rem;
+  }
+  }
+  #episodes {
+    padding: 3rem 0;
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid lighten($dark, 75%);
+        margin-bottom: 2rem;
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .episode_thumbnail {
+          width: 22%;
+          float: left;
+          img {
+            width: 10rem;
+            max-width: 100%;
+            border-radius: .35rem;
+          }
+        }
+        .episode_overview {
+          width: 76.5%;
+          float: left;
+          margin-left: 1.5%;
+        h2 {
+          a {
+            color: $dark;
+            text-decoration: none;
+          }
+        }
+        .description {
+          color: lighten($dark, 25%);
+        }
+      }
     }
   }
 }

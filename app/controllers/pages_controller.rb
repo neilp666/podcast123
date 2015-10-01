@@ -6,6 +6,9 @@ class PagesController < ApplicationController
   def podcasts
   end
 
+  def podcasts_show
+  end
+
   def index
   end
 

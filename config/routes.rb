@@ -9,7 +9,12 @@ Rails.application.routes.draw do
 
   get 'podcasts_show' => 'pages#podcasts_show'
 
-   get 'dashboard' => 'pages#dashboard'
+  get 'dashboard' => 'pages#dashboard'
+
+  get 'signin' => 'pages#signin'
+
+
+  get 'signup' => 'pages#signup'
 
 
   get 'episode' => 'pages#episode'

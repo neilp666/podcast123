@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002120855) do
+ActiveRecord::Schema.define(version: 20151003091349) do
 
   create_table "podcasts", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20151002120855) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "title"
+    t.text     "description"
+    t.string   "itunes"
+    t.string   "stitcher"
+    t.string   "podbay"
   end
 
   add_index "podcasts", ["email"], name: "index_podcasts_on_email", unique: true

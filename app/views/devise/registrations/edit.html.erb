@@ -1,4 +1,26 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="podcast_show">
+    <div id="show_banner">
+      <div class="wrapper_skinny">
+      <h1>The Rocketship Podcast Dashboard</h1>
+      </div>
+    </div>
+
+    <div id="links">
+      <div class="wrapper_skinny">
+        <ul>
+          <li>Episodes</li>
+          <li>>New Episode</li>
+          <li><%= link_to "Account Settings", 
+          edit_podcast_registration_path, class: "current" %></li>
+          <li><a href="#">View Podcast</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<div id="form">
+  <div class="wrapper_skinny">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -56,7 +78,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class: "button button_highlight button_block" %>
   </div>
 <% end %>
 
@@ -64,4 +86,5 @@
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+  </div>
+</div>

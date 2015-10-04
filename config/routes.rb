@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :podcasts
+  root 'welcome#index'
+
+  resources :podcasts, only: [:index, :show]
+
+
+  
   get 'pages/index'
 
   get 'pages/about'
@@ -20,7 +26,7 @@ Rails.application.routes.draw do
 
   get 'episode' => 'pages#episode'
 
-  root 'welcome#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

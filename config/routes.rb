@@ -1,33 +1,15 @@
 Rails.application.routes.draw do
   devise_for :podcasts
-  root 'welcome#index'
 
   resources :podcasts, only: [:index, :show] do
     resources :episodes
   end
 
+  authenticated :podcast do
+    root "podcasts#dashboard", as: "authenticated_root"
+  end
 
-  
-  get 'pages/index'
-
-  get 'pages/about'
-
-  get 'pages/contact'
-
-  get 'podcasts' => 'pages#podcasts'
-
-  get 'podcasts_show' => 'pages#podcasts_show'
-
-  get 'dashboard' => 'pages#dashboard'
-
-  get 'signin' => 'pages#signin'
-
-
-  get 'signup' => 'pages#signup'
-
-
-  get 'episode' => 'pages#episode'
-
+  root 'welcome#index'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

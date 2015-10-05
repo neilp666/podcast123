@@ -26,13 +26,25 @@
     <% end %>
   </div>
 
+
+  <div id="episode_content">
+    <div class="wrapper_skinny">
+      <img src="https://dl.dropboxusercontent.com/s/phrqfxef0c4x69x/river1.jpg" alt="london" class="
+      current_episode_thumbnail">
+      <h2><%= @episode.title %></h2>
+      <p class="description"><%= @episode.description %></p>
+    </div>
+  </div>
+
+
+
   <div id="episodes">
     <div class="wrapper_skinny">
       <ul class="cf">
         <% @episodes.each do |episode| %>
-         <li class="cf">
+        <li class="cf">
           <div class="episode_thumbnail">
-            <a href="#">
+            <a href="episode.html">
               <img src="https://dl.dropboxusercontent.com/s/phrqfxef0c4x69x/river1.jpg" alt="Narwhals Podcast" alt="test">
             </a>
           </div>
@@ -41,7 +53,7 @@
             <p class="description"><%= truncate(episode.description, length: 160) %></p>
           </div>
       </li>
-    <% end %>
+      <% end %>
     </ul>
   </div>
   </div>

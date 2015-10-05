@@ -1,0 +1,19 @@
+<%= form_for ([@podcast, @episode]) do |f| %>
+
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= t.text_field :title %>
+    </div>
+
+<br>
+<br>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+
+<br>
+<br>
+
+<%= f.submit class: "button button_highlight button_block" %>
+<% end %>

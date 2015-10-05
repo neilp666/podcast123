@@ -5,15 +5,16 @@
       <%= t.text_field :title %>
     </div>
 
-<br>
-<br>
     <div class="field">
       <%= f.label :description %><br>
       <%= f.text_area :description %>
     </div>
 
-<br>
-<br>
+    <div class="field">
+      <%= f.label :episode_thumbnail %><br>
+      <%= f.file_field :episode_thumbnail %>
+    </div>
 
-<%= f.submit class: "button button_highlight button_block" %>
+
+    <%= f.submit class: "button button_highlight button_block" %>
 <% end %>

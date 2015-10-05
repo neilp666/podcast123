@@ -29,8 +29,7 @@
 
   <div id="episode_content">
     <div class="wrapper_skinny">
-      <img src="https://dl.dropboxusercontent.com/s/phrqfxef0c4x69x/river1.jpg" alt="london" class="
-      current_episode_thumbnail">
+      <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
       <h2><%= @episode.title %></h2>
       <p class="description"><%= @episode.description %></p>
     </div>
@@ -45,7 +44,7 @@
         <li class="cf">
           <div class="episode_thumbnail">
             <a href="episode.html">
-              <img src="https://dl.dropboxusercontent.com/s/phrqfxef0c4x69x/river1.jpg" alt="Narwhals Podcast" alt="test">
+               <%= image_tag episode.episode_thumbnail.url(:medium)  %>
             </a>
           </div>
           <div class="episode_overview">

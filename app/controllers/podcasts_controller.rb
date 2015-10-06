@@ -17,7 +17,7 @@ class PodcastsController < ApplicationController
   def find_episode
     @episodes = Episode.where(podcast_id: @podcast).order("created_at DESC").paginate(:page => params[:page], :per_page => 12)
   end
-  end
+  
 
   def find_podcast
     if params[:id].nil?

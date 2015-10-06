@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '< 2.0'
+gem 'will_paginate', '~> 3.0.7'
 
 
 gem 'rails_12factor', group: :production

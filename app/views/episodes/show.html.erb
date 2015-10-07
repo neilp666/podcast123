@@ -12,8 +12,8 @@
        <% unless @podcast.podbay.blank? %>
       <a href="<%= @podcast.podbay %>" class="subscribe_link">Podbay</a>
       <% end %>
-      </div>
-    </div>
+   </div>
+</div>
 
 
   <div id="breadcrumb">
@@ -24,7 +24,7 @@
       <span>/</span>
       <%= @episode.title %>
     <% end %>
-  </div>
+ </div>
 
 
   <div id="episode_content">
@@ -32,6 +32,7 @@
       <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
       <h2><%= @episode.title %></h2>
       <p class="description"><%= @episode.description %></p>
+       
         <div id="jquery_jplayer_1" class="jp-jplayer"></div>
          <div id="jp_container_1" class="jp-audio">
           <div class="jp-gui jp-interface">
